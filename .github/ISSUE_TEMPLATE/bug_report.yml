@@ -1,0 +1,38 @@
+name: Bug Report
+description: Report a bug in Heroes Launcher
+labels: "bug :beetle:"
+body:
+- type: input
+  attributes:
+    label: Heroes Launcher Version
+    description: |
+      What version of Heroes Launcher are you using?
+
+      Note: Please only report issues for [latest Heroes Launcher version](https://github.com/HeroesLauncher/heroeslauncher/releases/latest).
+    placeholder: 1.0.0
+  validations:
+    required: true
+- type: dropdown
+  attributes:
+    label: What operating system(s) are you using?
+    multiple: true
+    options:
+      - Windows 7
+      - Windows 10
+      - Windows 11
+      - Other (specify below)
+  validations:
+    required: true
+- type: input
+  id: os_other
+  attributes:
+    label: Please specify your OS
+    description: If you selected "Other" above, enter your OS here
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Describe the bug
+    description: A clear description of the bug.
+  validations:
+    required: true
